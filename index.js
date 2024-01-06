@@ -78,7 +78,8 @@ const handleEvent = async (type, payload) => {
 app.listen(5002, async () => {
   console.log('Listening on 5002');
   try {
-    const res = await axios.get('http://localhost:5004/events');
+    // const res = await axios.get('http://localhost:5004/events');
+    const res = await axios.get('event-bus-u25c.onrender.com');
 
     for (let event of res.data) {
       console.log('Processing event:', event);
